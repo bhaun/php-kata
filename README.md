@@ -1,56 +1,50 @@
 kata/php
 ========
 
-PHP skeleton for doing coding katas
+Flip a tree for a specific key
 -----------------------------------
 
-*Code Kata* is a term coined by Dave Thomas, co-author of the book
-The Pragmatic Programmer, in a bow to the Japanese concept of kata
-in the martial arts. A code kata is an exercise in programming which
-helps a programmer hone their skills through practice and repetition.
-As of October 2011, Dave Thomas has published 21 different katas.
+basically, make this:
 
-You can find some to start practicing [here](http://codingdojo.org/cgi-bin/index.pl?KataCatalogue).
+     1
+   /   \
+  2     3
+ / \   / \
+4   5 6   7
 
-When you do programming katas, you use TDD. That's why I have included
-PHPUnit, Mockery, PHPSpec and Prophecy as composer dependencies. Choose
-the testing framework you feel more comfortable (or play with both).
+into this:
 
-Practicing a kata
-=================
+     5
+       \
+        2
+       / \
+      4   1
 
-Let's imagine you want to practice "Bowling game kata". Details about
-this kata can be found [here](http://codingdojo.org/cgi-bin/wiki.pl?KataBowling).
 
-You will need composer.
+Another Example would be this:
 
-    curl -sS https://getcomposer.org/installer | php
+     1
+   /   \
+  2     3
+       / \
+      4   5
 
-Then, use "create-project" command to clone this project as a template
-and create a new one in your computer.
+into this:
 
-    php composer.phar create-project kata/php bowling-kata dev-master
+     2
+   /   \
+  3     1
+ / \
+4   5
 
-Then add your classes to 'src/Kata' and your test cases to
-'src/Kata/Tests' and run 'php bin/phpunit' to run your tests.
 
-    php bin/phpunit
+The left most node becomes the root of flipped tree and its parent become its right child and the right sibling become its left child and same should be done for all left most nodes recursively.
 
-TestCase examples
-=================
 
-If you run 'php bin/phpunit' you will see the following output.
+sates:{
+  {
+    name: wyoming,
 
-    PHPUnit 3.8-gc4f2bcd by Sebastian Bergmann.
-    
-    Configuration read from /Users/carlosbuenosvinos/Documents/Web/bowling/phpunit.xml
-    
-    ...
-    
-    Time: 91 ms, Memory: 1.75Mb
-    OK (3 tests, 3 assertions)
-
-That's because you will find one class and its TestCase in the project
-in order to help you. You can delete them.
-
-Adder is a class that adds two numbers and AdderTest tests that.
+  }
+   
+}
