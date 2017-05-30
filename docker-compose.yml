@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  kata:
+    image: registry.clearlink.com/laravel-dev:sa
+    volumes:
+      - ./:/var/www/html
+    command: vendor/bin/phpunit
+
