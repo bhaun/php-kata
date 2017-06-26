@@ -1,15 +1,15 @@
 <?php
+
 namespace Kata\Tests;
 
-use Kata\Kata;
+use Kata\StringCalculator;
 
 class KataTest extends \PHPUnit_Framework_TestCase
 {
-    public function test_sum_fibo_less_4M()
+    public function test_add()
     {
-        $kata = new Kata();
-        $val = $kata->kata();
-        $this->assertEquals($val, 4613732);
+        $kata = new StringCalculator();
+        $val = $kata->calc('1+1');
+        $this->assertEquals($val, 2);
     }
-
 }
