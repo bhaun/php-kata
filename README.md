@@ -1,6 +1,21 @@
 kata/php
 ========
 
-The goal of a string calculator is to solve math problems given as strings, 
-for example "1+1" should return 2.  The idea is to not use eval; use a regex 
-or something else.
+You'll be given an address, one per multi-line block. Example:
+```
+Tudor City Greens
+24-38 Tudor City Pl
+New York, NY 
+10017
+USA
+```
+Your program should emit a labeled data structure representing the address. From the above example:
+```
+business=Tudor City Greens
+address=24-38
+street=Tudor City Pl
+city=New York
+state=NY
+postal_code=10017
+country=USA
+```
